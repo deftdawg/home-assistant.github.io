@@ -36,8 +36,9 @@ sensor:
 Configuration variables:
 
 - **host** (*Required*): The IP address of the QNAP NAS to monitor
-- **port** (*Optional*): The port number on which the QNAP NAS web interface is reachable. Defaults to `8080`.
+- **port** (*Optional*): The port number on which the QNAP NAS web interface is reachable. Defaults to `8080`. (set to `443` if using SSL on default port) 
 - **ssl** (*Optional*): Whether to connect via `https`. Defaults to `false`.
+- **verify_ssl** (*Optional*): Whether to validate QNAP's SSL certification. Defaults to `true`. (set to `false` to use QNAP's default self-signed certificate) 
 - **username** (*Required*): An user to connect to the QNAP NAS.
 - **password** (*Required*): The password of the user to connect to the QNAP NAS.
 - **drives** (*Optional*): Array of drives to monitor (ex: `0:1`). Defaults to all drives.
